@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yesno-react-app/static/css/main.ea69a0c7.css",
+    "main.js": "/yesno-react-app/static/js/main.16423ce8.js",
+    "index.html": "/yesno-react-app/index.html",
+    "main.ea69a0c7.css.map": "/yesno-react-app/static/css/main.ea69a0c7.css.map",
+    "main.16423ce8.js.map": "/yesno-react-app/static/js/main.16423ce8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea69a0c7.css",
+    "static/js/main.16423ce8.js"
+  ]
+}
