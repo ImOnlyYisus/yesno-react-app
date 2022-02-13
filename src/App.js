@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Background from "./components/Background";
+import FormToAsk from "./components/FormToAsk";
+import getYesOrNo from './services/yesOrNotApi'
+import { useState } from "react";
+
 
 function App() {
+  const initialValues = "";
+  const [yesNoValues, setYesNoValues] = useState({}
+    
+  );
+
+  const handleSubmit =(e) => {
+    e.preventDefault();
+    
+    getYesOrNo().then(res => {
+      setYesNoValues(res)
+    });
+    
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+
+        <Background image={yesNoValues.image} answer={yesNoValues.answer}/>
+        <div className="contenido">
+          <FormToAsk handleSubmit={handleSubmit} />
+        </div>
+
+      </div>
+    </>
   );
 }
 
